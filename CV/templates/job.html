@@ -35,34 +35,33 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#hello">Home</a>
+            <a class="nav-link" href="/#hello">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#bio">Bio</a>
+            <a class="nav-link" href="/#bio">Bio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about_us">Our Team</a>
+            <a class="nav-link" href="/#about_us">Our Team</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#join_us">Join Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="/#contact">Contact</a>
           </li>
 
         </ul>
       </div>
     </div>
   </nav>
-
   <!-- Hello message -->
 
-<section id="hello">
+  <section id="hello">
   <header class="masthead text-center text-white">
     <div class="masthead-content">
       <div class="container">
-        <h1 class="masthead-heading mb-0">Hello, message</h1>
-        <h2 class="masthead-subheading mb-0">We are a company!</h2>
+        <h1 class="masthead-heading mb-0">Jobs</h1>
+        <h2 class="masthead-subheading mb-0">What we need</h2>
       </div>
     </div>
     <div class="bg-circle-1 bg-circle"></div>
@@ -70,95 +69,26 @@
     <div class="bg-circle-3 bg-circle"></div>
     <div class="bg-circle-4 bg-circle"></div>
   </header>
-</section>
+  </section>
 
-  <!-- bio -->
+  <!-- jobs -->
 
-  <section id="bio">
+    <section id="jobs">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <div class="p-5">
-            <img class="img-fluid rounded-circle" src="{% static "assets/img/geo.png" %}" alt="">
-          </div>
-        </div>
         <div class="col-lg-6 order-lg-1">
-          <div class="p-5">
-            <h2 class="display-4">Georgia Fasoula</h2>
-            <p>Developer Monokeros</p>
+          <div class="row mt -5">
+            <div class="card-block block-1">
+            <h1 class="display-6 text-white">{{job.title}}</h1>
+            {% autoescape off %}
+            <div class="text-white">{{job.content}}</div>
+            {% endautoescape %}
+          </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <section>
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="p-5">
-            <img class="img-fluid rounded-circle" src="{% static "assets/img/tanasi.png" %}" alt="">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="p-5">
-            <h2 class="display-4">Thanos Mourtzoukos</h2>
-            <p>Developer Sixty-Nine</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    <!-- About us -->
-
-<section id="about_us">
-  <header class="masthead text-center text-white">
-    <div class="masthead-content">
-      <div class="container">
-        <h1 class="masthead-heading mb-0">Our Team</h1>
-        <h2 class="masthead-subheading mb-0"></h2>
-        <a href="/team" class="btn btn-primary btn-xl rounded-pill mt-5">Find more</a>
-      </div>
-    </div>
-    <div class="bg-circle-1 bg-circle"></div>
-    <div class="bg-circle-2 bg-circle"></div>
-    <div class="bg-circle-3 bg-circle"></div>
-    <div class="bg-circle-4 bg-circle"></div>
-  </header>
-</section>
-
-  <!-- Join-->
-
-  <section id="join_us">
-    <div class="masthead-container">
-      <div class="row align-items-center">
-        <div class="col-lg order-lg">
-          <div class="p-5">
-                  <center><h1 class="display-2">Join us</h1></center>
-                <center><a href="/jobs" class="btn btn-primary btn-xl rounded-pill mt-5">Find more</a><center>
-                </div>
-              </div>
-            </div>
-          </div>
-  </section>
-
-  <!-- Contact us -->
-
-<section id="contact">
-  <header class="masthead text-center text-white">
-    <div class="masthead-content">
-      <div class="container">
-        <h1 class="masthead-heading mb-0">Contact Us</h1>
-        <h2 class="masthead-subheading mb-0"></h2>
-      </div>
-    </div>
-    <div class="bg-circle-1 bg-circle"></div>
-    <div class="bg-circle-2 bg-circle"></div>
-    <div class="bg-circle-3 bg-circle"></div>
-    <div class="bg-circle-4 bg-circle"></div>
-  </header>
-</section>
 
   <!-- Footer -->
   <footer class="py-5 bg-black">
