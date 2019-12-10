@@ -160,6 +160,13 @@ header.masthead .bg-circle-4 {
   box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
 }
 
+#join_us .masthead-container{
+  height: 450px;
+}
+#join_us .p-5 {
+  margin: 5%;
+}
+
 /*This is for the text on bio*/
 
 .p-5 {
@@ -191,4 +198,8 @@ header.masthead .bg-circle-4 {
   .form-label-group input:-ms-input-placeholder {
     color: #777;
   }
+}
+
+.footer{
+  position: fixed;
 }

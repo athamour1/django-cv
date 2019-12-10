@@ -25,7 +25,7 @@ SECRET_KEY = '^x9n5zi%^2(#lhxdp&1r_uf6h--hrry=6voa3s46xop89p+7js'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [] # Kanonika einai keno ayto!
+ALLOWED_HOSTS = ['192.168.0.103'] # Kanonika einai keno ayto!
 
 
 
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'CV.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/osboxes/Desktop/django-cv/CV/templates'], # Edw bale to directory twn template ( Kanonika einai keno ayto) !
+        'DIRS': ['/home/u/seminario/django-cv/CV/templates'], # Edw bale to directory twn template ( Kanonika einai keno ayto) !
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,4 +120,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/home/osboxes/Desktop/django-cv/static/' # Edw bazeis to directory twn static (kanonika elege '/static/') !
+STATIC_URL = '/home/u/seminario/django-cv/static/' # Edw bazeis to directory twn static (kanonika elege '/static/') !
