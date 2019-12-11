@@ -129,7 +129,7 @@ header.masthead .bg-circle-4 {
 }
 
 .bg-primary {
-  background-color: #1abc9c !important;
+  background-color: #00438e !important;
 }
 
 .btn-primary {
@@ -143,21 +143,21 @@ header.masthead .bg-circle-4 {
 }
 
 .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(0, 67, 142, 0.5);
 }
 
 .btn-secondary {
-  background-color: #ff6a00;
-  border-color: #ff6a00;
+  background-color: #00438e;
+  border-color: #00438e;
 }
 
 .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
-  background-color: #1abc9c !important;
-  border-color: #1abc9c !important;
+  background-color: #00438e !important;
+  border-color: #00438e !important;
 }
 
 .btn-secondary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(0, 67, 142, 0.5);
 }
 
 #join_us .masthead-container{

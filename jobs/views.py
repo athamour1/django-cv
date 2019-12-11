@@ -17,3 +17,7 @@ def job(request, job_id):
     except Question.DoesNotExist:
         raise Http404("job does not exist")
     return render(request, 'job.html', {'job': job})
+
+
+def form(request):
+    return render(request, "form.html")
