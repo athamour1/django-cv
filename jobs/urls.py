@@ -12,5 +12,5 @@ from .views import (
 urlpatterns = [
     path('<int:job_id>', job),
     path('', index),
-    path('form', form),
+    path('form/<int:job_id>', form),
 ]

@@ -99,116 +99,21 @@
     <div class="container">
 	<div class="container-contact100">
 
-		<div class="wrap-contact100">
-			<form class="contact100-form validate-form">
-				<span class="contact100-form-title">
-					Personal information
-				</span>
-
-				<div class="wrap-input100 validate-input" data-validate="Please enter your name">
-					<input class="input100" type="text" name="name" placeholder="Full Name">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 validate-input" data-validate = "Please enter your email: e@a.x">
-					<input class="input100" type="text" name="email" placeholder="E-mail">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 validate-input" data-validate = "Please enter your phone">
-					<input class="input100" type="text" name="phone" placeholder="Phone">
-					<span class="focus-input100"></span>
-				</div>
-  </form>
-
-<<section id="file">
-  				<form class="contact100-form validate-form">
-					<span class="contact100-form-title">Profile</span>
-          <div class="row d-flex justify-content-center mt-100">
-            <div class="col-md-8">
-              <div class="wrap-input100 validate-input" data-validate = "Please upload your CV">
-              <div class="input100">
-              <div class="card-block">
-                  <form action="#" class="dropzone dz-clickable">
-                    <div class="dz-default dz-message text-center"><span>Drop files here to upload</span></div>
-                  </form>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-        </form>
-        <div class="text-center m-t-20">
-          <button class="btn btn-primary btn-xl rounded-pill mt-1">Upload </button>
-        </div>
-</section>
-
-					<form class="contact100-form validate-form">
-						<span class="contact100-form-title">
-						Details
-						</span>
 
 
-						<div class="wrap-input100 validate-input" data-validate = "This field is required.">
-							<textarea class="input100" name="message" placeholder="What are you interested in? What is your background?"></textarea>
-							<span class="focus-input100"></span>
-						</div>
+		<form method="post" action="/jobs/form/{{id}}">
 
-						<div class="wrap-input100 validate-input" data-validate = "This field is required.">
-							<textarea class="input100" name="message" placeholder="Do you have a GitHub/Bitbucket account or links to sample code of yours that you can share?"></textarea>
-							<span class="focus-input100"></span>
-						</div>
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit">
 
-						<div class="wrap-input100 validate-input" data-validate = "This field is required.">
-							<textarea class="input100" name="message" placeholder="What is the latest article that you read and influenced your work as an engineer and why?"></textarea>
-							<span class="focus-input100"></span>
-						</div>
 
-				<div class="container-contact100-form-btn">
-					<button class="btn btn-primary btn-xl rounded-pill mt-4">
-						<span>
-							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-							Submit application
-						</span>
-					</button>
-				</div>
 			</form>
 		</div>
 	</div>
-</div>
 
 </section>
 
-
-	<div id="dropDownSelect1"></div>
-
-<!--===============================================================================================-->
-  <script type="text/javascript" src="{% static "assets/vendor/jquery/jquery-3.2.1.min.js" %}"></script>
-<!--===============================================================================================-->
-<script type="text/javascript" src="{% static "assets/vendor/animsition/js/animsition.min.js" %}"></script>
-<!--===============================================================================================-->
-<script type="text/javascript" src="{% static "assets/vendor/bootstrap/js/popper.js" %}"></script>
-<script type="text/javascript" src="{% static "assets/vendor/bootstrap/js/bootstrap.min.js" %}"></script>
-<!--===============================================================================================-->
-<script type="text/javascript" src="{% static "assets/vendor/select2/select2.min.js" %}"></script>
-<!--===============================================================================================-->
-<script type="text/javascript" src="{% static "assets/vendor/daterangepicker/moment.min.js" %}"></script>
-<script type="text/javascript" src="{% static "assets/vendor/daterangepicker/daterangepicker.js" %}"></script>
-<!--===============================================================================================-->
-<script type="text/javascript" src="{% static "assets/vendor/countdowntime/countdowntime.js" %}"></script>
-<!--===============================================================================================-->
-<script type="text/javascript" src="{% static "assets/js/form.js" %}"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
 <!-- Footer -->
 <footer class="py-5 bg-black">
   <div class="container">

@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 
-from .models import Jobpos
+from .models import Jobpos, Candidates
+from .forms import CandidatesForm
 
 def index(request):
     jobs = Jobpos.objects.all()
@@ -19,5 +20,19 @@ def job(request, job_id):
     return render(request, 'job.html', {'job': job})
 
 
-def form(request):
-    return render(request, "form.html")
+def form(request, job_id):
+    if request.method == 'POST':
+        form = CandidatesForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            fullname = data['fullname']
+            email = data['email']
+            phone = data['phone']
+            interested = data['interested']
+            github = data['github']
+            article = data['article']
+            Candidates.objects.create(fullname=fullname, email=email, phone=phone, interested=interested, github=github, article=article, job_id=job_id)
+            return HttpResponseRedirect('/jobs/')
+    else:
+        form = CandidatesForm()
+    return render(request, 'form.html', {'id':job_id, 'form':form})

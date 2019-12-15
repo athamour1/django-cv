@@ -9,3 +9,16 @@ class Jobpos(models.Model):
 
     def __str__(self):
         return self.title
+
+class Candidates(models.Model):
+    fullname = models.CharField(max_length=64)
+    email = models.CharField(max_length=64)
+    phone = models.CharField(max_length=64)
+    interested = models.TextField()
+    github = models.TextField()
+    article = models.TextField()
+
+    job = models.ForeignKey(Jobpos, on_delete = models.CASCADE)
+
+    def __str__(self):
+        return self.fullname
