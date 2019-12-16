@@ -1,4 +1,7 @@
 {% load static %}
+
+{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +53,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="/jobs"><img class="img-fluid rounded-circle" src="{% static "assets/img/fav.png" %}" alt="" height="30" width="30"></a>
+      <a class="navbar-brand" href="/#hello"><img class="img-fluid rounded-circle" src="{% static "assets/img/fav.png" %}" alt="" height="30" width="30"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -82,9 +85,24 @@
   <section id="hello">
   <header class="masthead text-center text-white">
     <div class="masthead-content">
+
       <div class="container">
-        <h1 class="masthead-heading mb-0">Application Form</h1>
+        <h1 class="masthead-heading mb-0">Application Form for</h1>
+        {% for job in jobs %}
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-1">
+            <div class="row mt -5">
+              <div class="card-block block-1">
+              <h3 class="display-6 text-white">{{job.title}}</h3>
+             </div>
+            </div>
+          </div>
+        </div>
       </div>
+        {% endfor %}
+      </div>
+
     </div>
     <div class="bg-circle-1 bg-circle"></div>
     <div class="bg-circle-2 bg-circle"></div>
@@ -97,16 +115,13 @@
 
     <section id="form">
     <div class="container">
-	<div class="container-contact100">
-
-
-
+	<div class="container-contact100 contact100-form validate-form text-white">
 		<form method="post" action="/jobs/form/{{id}}">
 
             {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Submit">
-
+            {{ form | crispy }}
+            <p>Disclaimer: CV collects and processes personal data in accordance with the EU General Data Protection Regulation (GDPR). We are bound to use the information provided within your job application for recruitment purposes only and not to share these with any third parties. We will keep you resume in our database for any future consideration. In case you want to be deleted from our database you can contact us at hr@cv.gr.</p>
+          <center><button type="submit" class="btn btn-primary btn-xl rounded-pill mt-4 save btn btn-default">Save</button></center>
 
 			</form>
 		</div>
